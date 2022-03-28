@@ -29,13 +29,15 @@
 </head>
 <body class="bg-slate-300 dark:bg-zinc-900">
     <div class="max-w-6xl mx-auto animate-fade-in-down">
-        @include('public.layouts.header')
-    </div>
+        <header class="sticky top-0 z-30">
+            @include('public.layouts.header')
+        </header>
 
-    <div class="relative flex items-top justify-center min-h-screen sm:items-center py-4 sm:pt-0 animate-fade-in-down">
-        <div class="max-w-6xl mx-auto sm:px-6 lg:px-8">
-            @yield('content')
-        </div>
+        @yield('content')
+
+        <footer class="p-4 md:flex md:items-center md:justify-between md:p-6 dark:bg-gray-800 mt-48 mb-5">
+            @include('public.layouts.footer')
+        </footer>
     </div>
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
