@@ -1,6 +1,6 @@
 <nav class="bg-slate-300 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-zinc-900">
     <div class="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="https://flowbite.com" class="flex items-center">
+        <a href="{{ route('home') }}" class="flex items-center">
             <img src="{{ asset('icon-logo.png') }}" class="ml-5 h-6 sm:h-9" alt="Febryan Sambuari Logo" />
         </a>
         <button data-collapse-toggle="mobile-menu" type="button"
@@ -21,7 +21,7 @@
         <div class="hidden w-full md:block md:w-auto" id="mobile-menu">
             <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                 <li>
-                    <a href="#"
+                    <a href="{{ route('home') }}"
                         class="block py-2 pr-4 pl-3 text-zinc-800 hover:text-sky-600 md:p-0 dark:text-gray-400 md:dark:hover:text-sky-300 font-medium"
                         aria-current="page">Home</a>
                 </li>
