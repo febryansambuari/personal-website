@@ -18,8 +18,16 @@
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/favicon/favicon-16x16.png') }}">
     <link rel="manifest" href="{{ asset('img/favicon/site.webmanifest') }}">
 
+    <script>
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+        } else {
+            document.documentElement.classList.remove('dark')
+        }
+    </script>
+
 </head>
-<body class="bg-zinc-900 dark:bg-gray-900">
+<body class="bg-slate-300 dark:bg-zinc-900">
     <div class="max-w-6xl mx-auto animate-fade-in-down">
         @include('public.layouts.header')
     </div>
@@ -31,5 +39,6 @@
     </div>
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
+    <script src="{{ asset('js/app.js') }}"></script>
 </body>
 </html>
