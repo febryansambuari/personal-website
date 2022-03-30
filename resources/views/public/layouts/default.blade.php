@@ -28,19 +28,13 @@
 
 </head>
 <body class="bg-slate-300 dark:bg-zinc-900">
-    <header class="sticky top-0 z-30">
-        @include('public.layouts.header')
-    </header>
+    @include('public.layouts.header')
 
     <div class="max-w-6xl mx-auto animate-fade-in-down">
-
         @yield('content')
-
-        <footer class="px-2 sm:px-4 py-2.5 md:flex md:items-center md:justify-between mt-48 mb-3">
-            @include('public.layouts.footer')
-        </footer>
-
     </div>
+
+    @include('public.layouts.footer')
 
     <script src="https://unpkg.com/flowbite@1.4.1/dist/flowbite.js"></script>
     <script src="{{ asset('js/app.js') }}"></script>
