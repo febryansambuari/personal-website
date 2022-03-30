@@ -1,5 +1,5 @@
 <header class="sticky top-0 z-30">
-    <nav class="bg-slate-300 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-zinc-900">
+    <nav class="bg-white shadow-sm shadow-slate-300 border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-zinc-900">
         <div class="container flex flex-wrap justify-between items-center mx-auto">
             <a href="{{ route('home') }}" class="flex items-center">
                 <img src="{{ asset('icon-logo.png') }}" class="ml-5 h-6 sm:h-9" alt="Febryan Sambuari Logo" />
@@ -23,12 +23,12 @@
                 <ul class="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
                     <li>
                         <a href="{{ route('home') }}"
-                            class="{{ Route::current()->getName() == 'home' ? 'text-sky-400 font-semibold' : 'text-zinc-800 font-medium' }} block py-2 pr-4 pl-3  hover:text-sky-600 md:p-0 dark:text-gray-400 md:dark:hover:text-sky-300"
+                            class="{{ Route::current()->getName() == 'home' ? 'text-sky-400 font-semibold' : 'text-zinc-800 font-medium' }} block py-2 pr-4 pl-3  hover:text-sky-600 md:p-0 md:dark:hover:text-sky-300"
                             aria-current="page">Home</a>
                     </li>
                     <li>
                         <a href="{{ route('blog') }}"
-                            class="@if(Route::current()->getName() == 'blog' || Route::current()->getName() == 'blog.show') border-b-4 border-sky-400 @endif block py-2 pr-4 pl-3 text-zinc-800 hover:text-sky-600 md:p-0 dark:text-gray-400 md:dark:hover:text-sky-300 font-medium">Blog</a>
+                            class="@if(Route::current()->getName() == 'blog' || Route::current()->getName() == 'blog.show') text-sky-400 font-semibold @endif block py-2 pr-4 pl-3 text-zinc-800 hover:text-sky-600 md:p-0 dark:text-gray-400 md:dark:hover:text-sky-300 font-medium">Blog</a>
                     </li>
                     <li>
                         <a href="#"

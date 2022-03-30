@@ -27,7 +27,7 @@
     </script>
 
 </head>
-<body class="bg-slate-300 dark:bg-zinc-900">
+<body class="bg-white dark:bg-zinc-900">
     @include('public.layouts.header')
 
     <div class="max-w-6xl mx-auto animate-fade-in-down">
