@@ -1,7 +1,7 @@
-<div class="mt-5 grid sm:grid-cols-3 sm:gap-3">
-    <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-1">
+<div class="mt-5 grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-3">
+    <div class="bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-1">
         <a href="#">
-            <img class="rounded-t-lg" src="{{ asset('img/dummy/dummy-image-1.jpg') }}" alt="Dummy Image">
+            <img class="rounded-t-lg" src="{{ asset('img/dummy/dummy-image-1.jpg') }}" alt="Dummy Image" class="w-full">
         </a>
         <div class="p-5">
             <a href="#">

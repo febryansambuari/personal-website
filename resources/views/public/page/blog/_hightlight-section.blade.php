@@ -1,15 +1,15 @@
-<div class="grid grid-cols-3 gap-2">
-    <div class="col-span-2">
-        <img src="{{ asset('img/dummy/dummy-image-2.jpg') }}" alt="Dummy Image" class="rounded-md w-full h-3/4">
+<div class="grid lg:grid-cols-3 lg:gap-2">
+    <div class="lg:col-span-2">
+        <img src="{{ asset('img/dummy/dummy-image-2.jpg') }}" alt="Dummy Image" class="rounded-md w-full md:h-3/4">
     </div>
-    <div class="px-5">
+    <div class="mt-3 lg:mt-0 md:px-3">
         <a href="{{ route('blog.show', ['slug' => 'coba']) }}">
-            <h3 class="text-4xl text-gray-900 dark:text-white dark:hover:text-sky-400">How to set up a front-end project with Vite, React, and TypeScript</h3>
+            <h3 class="text-xl md:text-4xl text-gray-900 dark:text-white dark:hover:text-sky-400">How to set up a front-end project with Vite, React, and TypeScript</h3>
         </a>
 
         <hr class="my-3 dark:border dark:border-slate-400">
 
-        <p class="font-normal text-gray-700 dark:text-gray-400">
+        <p class="font-normal text-sm text-gray-700 dark:text-gray-400">
             Software development entails a lot of work like building new features, fixing bugs, infrastructure maintenance, keeping track of dependencies, phasing
         </p>
         <div class="flex justify-between mt-16">

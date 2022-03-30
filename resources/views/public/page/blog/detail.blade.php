@@ -3,14 +3,14 @@
 @section('content')
 <section class="container">
     <img src="{{ asset('img/dummy/dummy-image-2.jpg') }}" alt="Dummy Image" class="rounded-lg mt-8">
-    <h2 class="text-4xl p-6 mt-5 text-zinc-900 dark:text-white text-left">How to set up a front-end project with Vite, React, and TypeScript</h2>
-    <div class="flex justify-between">
+    <h2 class="text-lg md:text-4xl p-2 md:p-6 md:mt-5 text-zinc-900 dark:text-white text-left">How to set up a front-end project with Vite, React, and TypeScript</h2>
+    <div class="flex flex-col md:flex-row justify-between md:px-3 md:py-6 md:mt-3">
         <div>
-            <p class="text-blue-800 text-xs font-medium inline-flex items-center my-3 mx-1 px-2.5 py-0.5 rounded dark:text-blue-100">
-                Written on 29 March 2022, by Febryan Sambuari
+            <p class="text-blue-800 text-xs font-medium inline-flex items-center p-2 md:my-3 md:mx-1 md:px-2.5 md:py-0.5 dark:text-blue-100">
+                Written on 29 March 2022
             </p>
         </div>
-        <div>
+        <div class="hidden md:flex">
             <span
                 class="bg-blue-100 text-blue-800 text-xs font-semibold my-3 mx-1 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
                 Development
@@ -36,14 +36,14 @@
 
     <hr>
 
-    <p class="p-6 mt-5 dark:text-slate-300">
+    <p class="p-6 mt-3 md:mt-5 text-sm md:text-base dark:text-slate-300">
         Software development entails a lot of work like building new features, fixing bugs, infrastructure maintenance, keeping track of dependencies, phasing deprecated solutions out, etc. All of this works even without considering product, people, or operations. <br> <br>
         A slice of the work mentioned above constantly requires input from a human brain. Software is fundamentally 1s and 0s, but the end goal is to provide value to humans. Without any breakthrough in artificial intelligence, figuring out features that can be implemented and suit human needs programmatically remains a dream. <br> <br>
         Either way, there are a lot of tedious tasks like running tests, publishing releases, deploying features, keeping a repository clean. This task follows the same pattern every time, and they are not less important than others. <br> <br>
         We don't need any artificial or otherwise intelligence for these tasks every single time. We need to do it once to create some job and have that same job run based on some triggers.
     </p>
 
-    <p class="p-6 mt-5 dark:text-slate-300">
+    <p class="p-6 mt-2 text-sm md:text-base dark:text-slate-300">
         Software development entails a lot of work like building new features, fixing bugs, infrastructure maintenance, keeping track of dependencies, phasing deprecated solutions out, etc. All of this works even without considering product, people, or operations. <br> <br>
         A slice of the work mentioned above constantly requires input from a human brain. Software is fundamentally 1s and 0s, but the end goal is to provide value to humans. Without any breakthrough in artificial intelligence, figuring out features that can be implemented and suit human needs programmatically remains a dream. <br> <br>
         Either way, there are a lot of tedious tasks like running tests, publishing releases, deploying features, keeping a repository clean. This task follows the same pattern every time, and they are not less important than others. <br> <br>
@@ -63,7 +63,7 @@
 
     <hr>
 
-    <div class="mt-10 mb-10 text-left">
+    <div class="mt-10 mb-10 text-center">
         <p class="mb-3 dark:text-white">Share this post if you like it: </p>
         <button type="button" class="text-white bg-[#3b5998] hover:bg-[#3b5998]/90 focus:ring-4 focus:outline-none focus:ring-[#3b5998]/50 font-medium rounded-lg text-xs px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-[#3b5998]/55 mr-2 mb-2">
             <svg class="w-4 h-4 mr-2 -ml-1" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="facebook-f" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 512"><path fill="currentColor" d="M279.1 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.4 0 225.4 0c-73.22 0-121.1 44.38-121.1 124.7v70.62H22.89V288h81.39v224h100.2V288z"></path></svg>
@@ -84,19 +84,26 @@
     </div>
 </section>
 
-<section class="container mt-36">
+<section class="container mt-36 p-2">
     <h2 class="text-zinc-900 dark:text-slate-300 text-4xl">Other post that you might like</h2>
 
-    <div class="mt-5 grid sm:grid-cols-3 sm:gap-3">
+    {{-- Post Card --}}
+    <div class="mt-5 grid md:grid-cols-2 md:gap-2 lg:grid-cols-3 lg:gap-3">
         <div class="max-w-sm bg-white rounded-lg border border-gray-200 shadow-md dark:bg-gray-800 dark:border-gray-700 m-1">
+            {{-- Post Image --}}
             <a href="#">
                 <img class="rounded-t-lg" src="{{ asset('img/dummy/dummy-image-1.jpg') }}" alt="Dummy Image">
             </a>
+
+            {{-- Post Content --}}
             <div class="p-5">
+                {{-- Title --}}
                 <a href="#">
                     <h5 class="mb-3 text-2xl font-bold tracking-tight text-gray-900 dark:text-white dark:hover:text-sky-400">Noteworthy technology
                         acquisitions 2021</h5>
                 </a>
+
+                {{-- Tagging --}}
                 <span
                     class="bg-blue-100 text-blue-800 text-xs font-semibold my-3 mx-1 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
                     Development
@@ -109,8 +116,13 @@
                     class="bg-blue-100 text-blue-800 text-xs font-semibold my-3 mx-1 px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800">
                     Technology
                 </span>
+
+                {{-- Description --}}
                 <p class="mt-6 mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology
-                    acquisitions of 2021 so far, in reverse chronological order.</p>
+                    acquisitions of 2021 so far, in reverse chronological order.
+                </p>
+
+                {{-- CTA --}}
                 <div class="flex justify-between">
                     <span
                         class="text-blue-800 text-xs font-medium inline-flex items-center px-2.5 py-0.5 rounded dark:text-blue-100">
